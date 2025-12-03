@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "eolabtools"
 description = "Collection of tools for data"
-version = "1.0.1"
+version = "1.0.2"
 requires-python = ">=3.8.13"
 dependencies = []
 readme = "README.md"
