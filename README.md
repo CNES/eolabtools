@@ -1,10 +1,7 @@
 # Eolabtools
 
-Eolabtools allows to use various tools for satellite imagery analysis.
-
-## Documentation
-
-Full documentation available at [eolabtools.readthedocs.io](https://eolabtools.readthedocs.io).  
+Eolabtools allows to use various tools for satellite imagery analysis.  
+Full documentation is available at [eolabtools.readthedocs.io](https://eolabtools.readthedocs.io).  
 
 ## Detection Orientation Culture
 
