@@ -17,8 +17,7 @@ To install SunMapGeneration, please launch the following commands :
 
     conda create -n sunmap_env -c conda-forge python=3.12 numpy=1.26.4 gdal=3.9.3 rasterio timezonefinder pytz ephem pyyaml click geopandas kiwisolver matplotlib fiona scipy pyscaffold tqdm
     conda activate sunmap_env
-    pip install georastertools
-    pip install "eolabtools[SunMapGen]"
+    pip install georastertools "eolabtools[SunMapGen]"
 
 
 NightOsmRegistration installation
