@@ -19,9 +19,10 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-Test = [
+Dev = [
     "pytest",
-    "pytest-cov"
+    "pytest-cov",
+    "sphinx"
 ]
 NightOsmReg = [
     "pyyaml",
