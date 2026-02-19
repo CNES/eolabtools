@@ -15,10 +15,9 @@ To install SunMapGeneration, please launch the following commands :
 
 .. code-block:: console
 
-    conda create -n sunmap_env python=3.12 libgdal=3.5.0 -c conda-forge -c defaults -y
+    conda create -n sunmap_env -c conda-forge python=3.12 numpy=1.26.4 gdal=3.9.3 rasterio timezonefinder pytz ephem pyyaml click geopandas kiwisolver matplotlib fiona scipy pyscaffold tqdm
     conda activate sunmap_env
-    pip install georastertools --no-binary rasterio
-    pip install eolabtools[SunMapGen] --force-reinstall --no-cache-dir
+    pip install georastertools "eolabtools[SunMapGen]"
 
 
 NightOsmRegistration installation
@@ -28,9 +27,10 @@ To install NightOsmRegistration, please launch the following commands :
 
 .. code-block:: console
 
-    conda create -n nightosm_env python=3.12 libgdal=3.11.0 markupsafe -c conda-forge
+    conda create -n nightosm_env -c conda-forge python=3.12 gdal=3.11.5 pyrosm rasterio numpy pyogrio geopandas opencv matplotlib pyyaml fiona scikit-image
     conda activate nightosm_env
-    pip install eolabtools[NightOsmReg]
+    pip install "eolabtools[NightOsmReg]"
+
 
 DetectionOrientationCulture installation
 =================================
@@ -39,6 +39,6 @@ To install DetectionOrientationCulture, please launch the following commands :
 
 .. code-block:: console
 
-    conda create -n orcult_env python=3.12 libgdal=3.11.0 -c conda-forge -c defaults -y
+    conda create -n orcult_env -c conda-forge python=3.11 numpy=1.26.4 gdal=3.11.5 pandas=1.5.3 geopandas=0.14.4 rasterio fiona scikit-learn opencv pyyaml
     conda activate orcult_env
-    pip install eolabtools[DetecOrCult]
+    pip install opencv-contrib-python "eolabtools[DetecOrCult]"

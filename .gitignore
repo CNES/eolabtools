@@ -6,3 +6,6 @@
 *.png
 *.pyc
 *.ipynb_checkpoints
+build/
+*.egg-info
+__pycache__/*
