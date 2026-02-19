@@ -1,11 +1,14 @@
 # Eolabtools
 
-
 Eolabtools allows to use various tools for satellite imagery analysis.
 
-# Detection Orientation Culture
+## Documentation
 
-## Installation procedure
+Full documentation available at [eolabtools.readthedocs.io](https://eolabtools.readthedocs.io).  
+
+## Detection Orientation Culture
+
+### Installation procedure
 
 To install DetectionOrientationCulture, please launch the following commands :
 
@@ -15,7 +18,7 @@ conda activate orcult_env
 pip install opencv-contrib-python "eolabtools[DetecOrCult]"
 ```
 
-## Usage
+### Usage
 
 To obtain the crop orientation in a shapefile format, please use the following command. The method implemented uses the fld library from openCV.
 
@@ -43,11 +46,11 @@ plots are calculated.
 supplied as input.- ``--osm-config`` : Path to the OSM configuration file with tags to keep in binary raster
 
 
-# Night OSM Registration
+## Night OSM Registration
 
 This tool performs night visible data registration based on OSM reference.
 
-## Installation procedure
+### Installation procedure
 
 To install NightOsmRegistration, please launch the following commands :
 
@@ -57,7 +60,7 @@ conda activate nightosm_env
 pip install "eolabtools[NightOsmReg]"
 ```
 
-## Using night_osm_image_registration
+### Using night_osm_image_registration
 
 Use the command ``night_osm_image_registration`` with the following arguments :
 
@@ -80,7 +83,7 @@ Arguments are the following :
 
 - ``--osm-config`` : Path to the OSM configuration file with tags to keep in binary raster
 
-## Using night_osm_vector_registration
+### Using night_osm_vector_registration
 
 Use the command ``night_osm_vector_registration`` with the following arguments :
 
@@ -102,7 +105,7 @@ Arguments are the following :
 
 - ``-n``, ``--name`` : Basename for the output file.
 
-# Sun Map Generation
+## Sun Map Generation
 
 SunMapGeneration generates a map per date with the percentage of sun exposure over the time range, as well as a vector file that
 gives the transition times from shade to sun (and sun to shade) for each pixel at the first date.
@@ -114,7 +117,7 @@ Shadow masks can also be produced at each step.
 If the area of interest is important, the DSM should be divided into tiles beforehand (typically 1km*1km). The list of tiles is
 given as input. The tool will manage the shadow impact on adjacent tiles.
 
-## Installation procedure
+### Installation procedure
 
 
 To install SunMapGeneration, please launch the following commands :
@@ -126,7 +129,7 @@ pip install georastertools
 pip install "eolabtools[SunMapGen]"
 ```
 
-## Usage
+### Usage
 
 To launch SunMapGeneration, please use the following command :
 
@@ -160,14 +163,14 @@ sun_map_generation --digital_surface_model /path_to_input_files/input_files.lst 
 - ``--save_masks`` : To save shadow masks calculated at each time step
 
 
-# Tests
+## Tests
 
 The project comes with a suite functional tests. To run them, 
 launch the command ``pytest tests``. To run a specific test, execute ``pytest tests/test_toolname.py::test_name``.
 The tests perform comparisons between generated files and reference files. 
 
 
-# Documentation generation
+## Documentation generation
 
 To generate the documentation, run in an environment that contains `sphinx_rtd_theme` and `sphinxcontrib.bibtex` : 
 
