@@ -19,13 +19,16 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-NightOsmReg = [
+Test = [
     "pytest",
-    "pytest-cov",
+    "pytest-cov"
+]
+NightOsmReg = [
     "pyyaml",
     "numpy",
-    "gdal==3.11.0",
-    "fiona==1.9.6",
+    "pandas<3",
+    "gdal==3.11.5",
+    "fiona",
     "pyogrio",
     "shapely>=2",
     "geopandas",
@@ -36,32 +39,33 @@ NightOsmReg = [
     "matplotlib"
 ]
 SunMapGen = [
-    "pytest",
-    "pytest-cov",
     "pyyaml",
-    "gdal==3.5.0",
-    "numpy<2",
+    "gdal==3.9.3",
+    "georastertools",
+    "rasterio",
+    "numpy==1.26.4",
     "timezonefinder",
-    "ephem"
+    "ephem",
+    "pytz"
 ]
 DetecOrCult = [
-    "pytest",
-    "pytest-cov",
     "pyyaml",
-    "geopandas==0.12.2",
-    "fiona==1.9.6",
-    "rasterio",
-    "gdal==3.11.0",
-    "scikit-learn",
-    "opencv-contrib-python",
-    "rasterstats",
     "numpy==1.26.4",
-    "pandas==1.5.3"
+    "fiona",
+    "rasterio",
+    "gdal==3.11.5",
+    "pandas==1.5.3",
+    "geopandas==0.14.4",
+    "rasterstats",
+    "scikit-learn",
+    "opencv-python",
+    "opencv-contrib-python"
 ]
 
 [project.urls]
 homepage = "https://github.com/CNES/eolabtools"
 repository = "https://github.com/CNES/eolabtools"
+documentation = "https://eolabtools.readthedocs.io"
 
 [project.scripts]
 night_osm_image_registration = "eolabtools.night_osm_registration.register_image:main"
